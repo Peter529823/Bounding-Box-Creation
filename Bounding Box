@@ -1,0 +1,16 @@
+import cv2
+import matplotlib.pyplot as plt
+
+# Read the image (sample image)
+image = cv2.imread('0001.jpeg')
+
+# Define the bounding box coordinates
+x1, y1 = 40, 40  # Top-left corner
+x2, y2 = 150, 150  # Bottom-right corner
+
+# Draw the bounding box
+cv2.rectangle(image, (x1, y1), (x2, y2), (0, 255, 0), 2)
+
+# Display the image using matplotlib
+plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+plt.show()
